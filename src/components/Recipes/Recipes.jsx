@@ -15,7 +15,7 @@ const Recipes = ({handleAddToCook}) => {
     
 
     return (
-        <div className='md:w-2/3 order-2 md:order-1 border-2 border-red-500'>
+        <div className='md:w-2/4 lg:w-2/3 order-2 md:order-1 border-2 border-red-500'>
             <h1>Recipes</h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
             {

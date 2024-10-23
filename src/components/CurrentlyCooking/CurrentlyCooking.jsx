@@ -1,9 +1,9 @@
 import Proptype from "prop-types";
 
-const CurrentlyCooking = ({cookingQueue}) => {
-    return (
-        <div>
-           <h1>Currently cooking : {cookingQueue.length}</h1>
+const CurrentlyCooking = ({ cookingQueue,totalTime,totalCalories }) => {
+  return (
+    <div>
+      <h1>Currently cooking : {cookingQueue.length}</h1>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
@@ -22,21 +22,32 @@ const CurrentlyCooking = ({cookingQueue}) => {
                 <td>{recipe.preparing_time} min</td>
                 <td>{recipe.calories} cal</td>
               </tr>
-              
             ))}
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Total time = {totalTime} min</td>
+              <td>Total calories = {totalCalories} cal</td>
+            </tr>
           </tbody>
         </table>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 CurrentlyCooking.propTypes = {
-    recipeQueue: Proptype.array.isRequired,
+  recipeQueue: Proptype.array.isRequired,
 };
 
-CurrentlyCooking.propTypes ={
-    cookingQueue: Proptype.array.isRequired,
-}
+CurrentlyCooking.propTypes = {
+  cookingQueue: Proptype.array.isRequired,
+};
+
+CurrentlyCooking.propTypes = {
+  cookingQueue: Proptype.array.isRequired,
+  totalTime: Proptype.number.isRequired,
+  totalCalories: Proptype.number.isRequired,
+};
 
 export default CurrentlyCooking;

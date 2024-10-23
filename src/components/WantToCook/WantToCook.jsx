@@ -1,6 +1,6 @@
 import Proptype from "prop-types";
 
-const WantToCook = ({ recipeQueue, handlePreparing }) => {
+const WantToCook = ({ recipeQueue, handlePreparing,handleTotalTimeAndCalories }) => {
   return (
     <div>
       <h1>Want to cook : {recipeQueue.length}</h1>
@@ -24,7 +24,10 @@ const WantToCook = ({ recipeQueue, handlePreparing }) => {
                 <td>{recipe.calories} cal</td>
                 <td>
                   <button
-                    onClick={() => handlePreparing(recipe)}
+                    onClick={() => {
+                      handleTotalTimeAndCalories(recipe);
+                      handlePreparing(recipe);
+                    }}
                     className="btn text-black bg-[#0BE58A] rounded-full hover:bg-violet-500 hover:text-white"
                   >
                     Preparing
@@ -45,6 +48,10 @@ WantToCook.propTypes = {
 
 WantToCook.propTypes = {
   handlePreparing: Proptype.func.isRequired,
+};
+
+WantToCook.propTypes = {
+  handleTotalTimeAndCalories: Proptype.func.isRequired,
 };
 
 export default WantToCook;

@@ -5,8 +5,8 @@ import { useState } from "react";
 const OurRecipes = () => {
   const [recipeQueue, setRecipeQueue] = useState([]);
   const [cookingQueue, setCookingQueue] = useState([]);
-
-  
+  const [totalTime, setTotalTime] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0);
 
   const handleAddToCook = (recipe) => {
     const isExist = recipeQueue.find(
@@ -21,9 +21,13 @@ const OurRecipes = () => {
 
   const handlePreparing = (recipe) => {
     // remove item from want to cook section
-    const deletedRecipe = recipeQueue.find((deletedRecipe) => deletedRecipe.recipe_id === recipe.recipe_id);
+    const deletedRecipe = recipeQueue.find(
+      (deletedRecipe) => deletedRecipe.recipe_id === recipe.recipe_id
+    );
     // add item in currently cook section
-    const updatedRecipeQueue = recipeQueue.filter((updatedRecipe) => updatedRecipe.recipe_id !== recipe.recipe_id);
+    const updatedRecipeQueue = recipeQueue.filter(
+      (updatedRecipe) => updatedRecipe.recipe_id !== recipe.recipe_id
+    );
     setRecipeQueue(updatedRecipeQueue);
     setCookingQueue([...cookingQueue, deletedRecipe]);
     // don't duplicate item in currently cook section
@@ -35,6 +39,12 @@ const OurRecipes = () => {
     // } else {
     //   alert("This recipe is already in cooking section");
     // }
+  };
+
+  const handleTotalTimeAndCalories = (recipe) => {
+    const { preparing_time, calories } = recipe;
+    setTotalTime(totalTime + preparing_time);
+    setTotalCalories(totalCalories + calories);
   };
 
   return (
@@ -52,6 +62,9 @@ const OurRecipes = () => {
           recipeQueue={recipeQueue}
           handlePreparing={handlePreparing}
           cookingQueue={cookingQueue}
+          handleTotalTimeAndCalories={handleTotalTimeAndCalories}
+          totalTime={totalTime}
+          totalCalories={totalCalories}
         />
       </div>
     </div>
