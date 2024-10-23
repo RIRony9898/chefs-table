@@ -2,7 +2,7 @@
   {
     "recipe_id": 1,
     "recipe_name": "Grilled Chicken Basil",
-    "recipe_image": "grilled_chicken_basil.jpg",
+    "recipe_image": "https://i.ibb.co.com/FYX7sfP/item-1-chicken-soy.jpg",
     "short_description": "A healthy grilled chicken recipe with fresh basil and a soy marinade.",
     "ingredients": [
       "550 g chicken breast",
@@ -17,7 +17,7 @@
   {
     "recipe_id": 2,
     "recipe_name": "Spaghetti Bolognese",
-    "recipe_image": "spaghetti_bolognese.jpg",
+    "recipe_image": "https://i.ibb.co.com/zhk5mGV/item-2-beef-stir-fry.jpg",
     "short_description": "Classic Italian pasta with a rich meat sauce.",
     "ingredients": [
       "500 g ground beef",
@@ -32,7 +32,7 @@
   {
     "recipe_id": 3,
     "recipe_name": "Vegetable Stir-fry",
-    "recipe_image": "vegetable_stir_fry.jpg",
+    "recipe_image": "https://i.ibb.co.com/x2w5ChT/item-3-veggie-pasta.jpg",
     "short_description": "A quick and easy stir-fry with colorful vegetables and soy sauce.",
     "ingredients": [
       "200 g broccoli",
@@ -47,7 +47,7 @@
   {
     "recipe_id": 4,
     "recipe_name": "Beef Tacos",
-    "recipe_image": "beef_tacos.jpg",
+    "recipe_image": "https://i.ibb.co.com/Xx3zNNb/item-4-fish-tacos.jpg",
     "short_description": "Flavorful beef tacos with fresh salsa and avocado.",
     "ingredients": [
       "400 g ground beef",
@@ -62,7 +62,7 @@
   {
     "recipe_id": 5,
     "recipe_name": "Chicken Caesar Salad",
-    "recipe_image": "chicken_caesar_salad.jpg",
+    "recipe_image": "https://i.ibb.co.com/28dNs0M/item-5-chicken-salad.jpg",
     "short_description": "A classic Caesar salad with grilled chicken and a creamy dressing.",
     "ingredients": [
       "300 g grilled chicken breast",
@@ -77,7 +77,7 @@
   {
     "recipe_id": 6,
     "recipe_name": "Mango Smoothie",
-    "recipe_image": "mango_smoothie.jpg",
+    "recipe_image": "https://i.ibb.co.com/qRVjX82/item-6-vegan-curry.jpg",
     "short_description": "A refreshing mango smoothie with a hint of lime.",
     "ingredients": [
       "1 ripe mango",
