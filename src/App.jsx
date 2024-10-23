@@ -6,10 +6,6 @@ function App() {
     <div className='container mx-auto'>
       <Header/>
       <Main/>
-      
-      {/* main
-      // our recipe section
-       */}
     </div>
   );
 }

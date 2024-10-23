@@ -1,12 +1,13 @@
 import Proptype from 'prop-types'
 
-const Recipe = ({recipe}) => {
+const Recipe = ({recipe,handleAddToCook}) => {
     const {recipe_image,recipe_name,short_description,ingredients,preparing_time,calories} = recipe
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
-        <figure>
+        <figure className='pt-4 px-4'>
           <img
+          className='h-80 w-full rounded-lg'
             src={recipe_image}
             alt={recipe_name}
           />
@@ -27,7 +28,7 @@ const Recipe = ({recipe}) => {
             <p>Calories: <br /> {calories} calories</p>
           </div>
           <div className="card-actions justify-center mt-4">
-            <button className="btn text-black bg-[#0BE58A] rounded-full hover:bg-violet-500 hover:text-white">Want to Cook</button>
+            <button onClick={()=>handleAddToCook(recipe)} className="btn text-black bg-[#0BE58A] rounded-full hover:bg-violet-500 hover:text-white">Want to Cook</button>
           </div>
         </div>
       </div>
@@ -37,6 +38,7 @@ const Recipe = ({recipe}) => {
 
 Recipe.propTypes = {
   recipe: Proptype.object.isRequired,
+  handleAddToCook: Proptype.func.isRequired,
 };
 
 export default Recipe;
