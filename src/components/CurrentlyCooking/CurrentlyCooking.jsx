@@ -2,8 +2,9 @@ import Proptype from "prop-types";
 
 const CurrentlyCooking = ({ cookingQueue,totalTime,totalCalories }) => {
   return (
-    <div>
-      <h1>Currently cooking : {cookingQueue.length}</h1>
+    <div className='border rounded-lg'>
+      <h1 className='text-2xl font-semibold p-4'>Currently cooking : {cookingQueue.length}</h1>
+      <hr />
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
@@ -23,7 +24,7 @@ const CurrentlyCooking = ({ cookingQueue,totalTime,totalCalories }) => {
                 <td>{recipe.calories} cal</td>
               </tr>
             ))}
-            <tr>
+            <tr className='border-t-2'>
               <td></td>
               <td></td>
               <td>Total time = {totalTime} min</td>

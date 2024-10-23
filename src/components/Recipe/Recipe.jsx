@@ -4,7 +4,7 @@ const Recipe = ({recipe,handleAddToCook}) => {
     const {recipe_image,recipe_name,short_description,ingredients,preparing_time,calories} = recipe
   return (
     <div>
-      <div className="card bg-base-100 shadow-xl">
+      <div className="card bg-base-100 shadow-xl border">
         <figure className='pt-4 px-4'>
           <img
           className='h-80 w-full rounded-lg'

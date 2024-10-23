@@ -4,7 +4,7 @@ import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 
 const Sidebar = ({ recipeQueue, handlePreparing,cookingQueue,handleTotalTimeAndCalories,totalTime,totalCalories }) => {
   return (
-    <div className="md:w-2/4 lg:w-1/3 order-1 md:order-2 border-2 border-blue-500">
+    <div className="md:w-2/4 lg:w-1/3 order-1 md:order-2 flex flex-col gap-6">
       <WantToCook recipeQueue={recipeQueue} handlePreparing={handlePreparing} handleTotalTimeAndCalories={handleTotalTimeAndCalories} />
 
       <CurrentlyCooking recipeQueue={recipeQueue} cookingQueue={cookingQueue} totalTime={totalTime}

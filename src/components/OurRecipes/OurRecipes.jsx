@@ -55,7 +55,7 @@ const OurRecipes = () => {
         vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum
         mauris aenean neque.{" "}
       </p>
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between gap-4">
         <Recipes handleAddToCook={handleAddToCook} />
 
         <Sidebar

@@ -2,8 +2,9 @@ import Proptype from "prop-types";
 
 const WantToCook = ({ recipeQueue, handlePreparing,handleTotalTimeAndCalories }) => {
   return (
-    <div>
-      <h1>Want to cook : {recipeQueue.length}</h1>
+    <div className='border rounded-lg'>
+      <h1 className='text-2xl font-semibold p-4'>Want to cook : {recipeQueue.length}</h1>
+      <hr />
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
